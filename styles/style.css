@@ -74,6 +74,7 @@ body {
   border: 1px solid #888;
   border-radius: 5px;
   background: #55ecfc;
+  cursor: pointer;
 }
 .form-container input[type="submit"]:hover {
   background: #ffab40;
