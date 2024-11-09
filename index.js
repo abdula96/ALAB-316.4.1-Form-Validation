@@ -163,7 +163,6 @@ function isPasswordValid(password, username) {
   return "";
 }
 
-// Login form validation logic
 function validateLoginForm(event) {
   event.preventDefault();
 
