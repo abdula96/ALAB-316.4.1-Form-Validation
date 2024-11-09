@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation Practice</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- Font Awesome for Icons -->
+    <script src="index.js"></script>
+    <script type="javascript" src="index.js" defer></script>
+  </head>
+  <body>
+    <!-- Container for entire form -->
+    <div class="form-container">
+      <!-- Registration Side -->
+      <div>
+        <h1>Register</h1>
+        <p>Please provide your information below.</p>
+
+        <!-- Registration Form -->
+        <form id="registration">
+          <input
+            name="username"
+            type="text"
+            placeholder="Username"
+            required
+            minlength="4"
+          />
+          <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
+
+          <input name="email" type="email" placeholder="Email" required />
+          <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
+          ><br />
+
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            required
+            minlength="12"
+          />
+          <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
+
+          <input
+            name="passwordCheck"
+            type="password"
+            placeholder="Repeat Password"
+            required
+          />
+          <span class="input-icon"><i class="fa-solid fa-key"></i></span
+          ><br /><br />
+
+          <div class="flex-row">
+            <input name="terms" type="checkbox" required />
+            <label for="terms"
+              >I agree to the&nbsp;<a href="#">Terms of Use</a>.</label
+            >
+            <input type="submit" value="Register" />
+          </div>
+        </form>
+      </div>
+
+      <!-- Success Message -->
+      <div
+        id="successMessage"
+        style="
+          display: none;
+          background: #d4edda;
+          color: #155724;
+          padding: 15px;
+          margin-top: 15px;
+        "
+      >
+        <strong>Success!</strong> You have successfully registered.
+      </div>
+
+      <!-- Login Side -->
+      <div>
+        <h1>Login</h1>
+        <p>Login using your account information.</p>
+        <form id="login" style="border-bottom: 1px solid lightgray">
+          <input
+            name="username"
+            type="text"
+            placeholder="Username"
+            required
+            minlength="3"
+          />
+          <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            required
+            minlength="6"
+          />
+          <span class="input-icon"><i class="fa-solid fa-key"></i></span
+          ><br /><br />
+          <div class="flex-row">
+            <input name="persist" type="checkbox" />
+            <label for="persist">Keep me logged in.</label>
+            <input type="submit" value="Login" />
+          </div>
+        </form>
+        <p>Forgot your <a href="#">Username</a> or <a href="#">Password?</a></p>
+      </div>
+    </div>
+
+    <!-- Error Display Container -->
+    <div id="errorDisplay"></div>
+  </body>
+</html>
